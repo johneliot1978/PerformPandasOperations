@@ -1,0 +1,30 @@
+# Some Examples
+# Drop all columns except the first one
+df = df.iloc[:, [0]]
+
+# Create a new column based on a condition
+df['new_column'] = df['col1'].astype(int) > 3
+
+# Drop rows where a specific column has missing values
+df = df.dropna(subset=['col2'])
+
+# Fill missing values in a specific column with a default value
+df['col3'] = df['col3'].fillna('default_value')
+
+# Rename columns
+df = df.rename(columns={'col1': 'new_col1', 'col2': 'new_col2'})
+
+# Filter rows based on a condition in a specific column
+df = df[df['new_col1'].astype(int) > 3]
+
+# Drop columns that do not contain a specific substring
+df = df[[col for col in df if 'substring' in col]]
+
+# Convert a column to a different data type
+df['new_col1'] = df['new_col1'].astype(float)
+
+# Compare two columns and create a new column based on the comparison
+df['comparison_result'] = df['new_col1'] == df['new_col2']
+
+# Sort the DataFrame by a specific column
+df = df.sort_values(by='new_col1')
