@@ -1,5 +1,4 @@
-# Description: This script is designed to be run from the command line and apply one or more pandas operations, listed line by line in a separate operations file, to a specified data file. It then outputs the resulting DataFrame to a CSV file. The purpose of this script is to automate and streamline the process of performing data transformations or manipulations on tabular data using pandas. Usage: python script.py <data_filename> <operations_filename> - data_filename: The name of the data file (CSV format) containing the input data. - operations_filename: The name of the operations file containing pandas operations, with one operation per line. This file should specify the transformations to be applied to the input data. Example: python script.py input_data.csv operations.txt Dependencies: - pandas (imported as pd) To install Dependencies run: pip install pandas
-import pandas as pd
+# Description: This script automates pandas operations from the command line. It reads operations from a file, applies them to a CSV file, and outputs the result.
 import sys
 
 def main():
